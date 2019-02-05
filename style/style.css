@@ -1,0 +1,133 @@
+body {
+  font-family: 'Century Gothic', Arial;
+}
+
+.game-board {
+  background-color: black;
+  grid-template-columns: 125px 125px 125px 125px;
+  grid-template-rows: 125px 125px 125px 125px;
+  display: grid;
+  grid-column-gap: 0px;
+  /* background-image: url('https://source.unsplash.com/collection/225/500x500'); */
+}
+
+.game-tile {
+  background-color: white;
+  margin: 2px;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 4px;
+  opacity: 0.6;
+}
+
+.game-tile p.feedback {
+  vertical-align: middle;
+  padding: 4px;
+  max-width: 105px;
+  word-wrap: break-word;
+  display: none;
+}
+
+.game-tile.selected {
+  opacity: 1;
+}
+
+.game-tile.correct {
+  background-color: #45e048;
+}
+
+.game-tile.incorrect {
+  background-color: #e04545;
+}
+
+.game-tile:hover {
+  box-shadow: 2px 3px black;
+}
+
+.game-tile > .center > img {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  visibility: hidden;
+}
+
+.center {
+  display: table;
+  position: relative;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+}
+
+#header h1 {
+  font-size: 25px;
+  font-weight: normal;
+  margin-top: 1.2em;
+}
+
+#header {
+  text-align: center;
+  color: white;
+}
+
+#logo {
+  height: 24px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+#instructions {
+  min-height: 31px;
+  font-size: 16px;
+}
+
+#container {
+  position: relative;
+  margin: auto;
+  width: 500px;
+  border: 1px solid black;
+  padding: 10px;
+  background-image: linear-gradient(to bottom right, #3f67a8 , #29497c);
+  text-align: center;
+}
+
+.wrong {
+  background-color: #ce4e4e;
+  color: white;
+  font-weight: bold;
+}
+
+.correct {
+  background-color: #4ece5f;
+  color: white;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin: .8em 0 .1em;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+#restart-btn {
+  background-color: grey;
+}
+
+#check-btn {
+  background-color: #e08c1f;
+}

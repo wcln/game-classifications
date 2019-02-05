@@ -1,0 +1,32 @@
+{
+  "clue": "CLUE: My shape is NOT a Quadilateral.",
+  "instructions": "Select ALL shapes on your game board that match the clue above and then click 'Check'.",
+  "congratulations": "Congratulations! You have selected all of the correct shapes.",
+  "correct_images": [2, 4, 5, 6, 7, 8, 9, 12, 13, 16],
+  "feedback": [
+    {
+      "id": 1,
+      "feedback": "Number 1 feedback!"
+    },
+    {
+      "id": 3,
+      "feedback": "Number 3 feedback!"
+    },
+    {
+      "id": 10,
+      "feedback": "Number 10 feedback!"
+    },
+    {
+      "id": 11,
+      "feedback": "Number 11 feedback!"
+    },
+    {
+      "id": 14,
+      "feedback": "Number 14 feedback!"
+    },
+    {
+      "id": 15,
+      "feedback": "Number 15 feedback!"
+    }
+  ]
+}
