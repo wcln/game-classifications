@@ -68,15 +68,15 @@ function initEventListeners() {
 
   $('.game-tile').on("mouseover", function(event) {
     if ($(this).hasClass('incorrect') && reviewing) {
-      $(this).find('img').css("display", "none");
-      $(this).find('.feedback').css("display", "table-cell");
+      $(this).find('img').css("display", "table-cell");
+      $(this).find('.feedback').css("display", "none");
     }
   });
 
   $('.game-tile').on("mouseout", function(event) {
     if ($(this).hasClass('incorrect') && reviewing) {
-      $(this).find('img').css("display", "table-cell");
-      $(this).find('.feedback').css("display", "none");
+      $(this).find('img').css("display", "none");
+      $(this).find('.feedback').css("display", "table-cell");
     }
   });
 }
@@ -94,6 +94,8 @@ function check() {
 
     } else {
       $(this).addClass('incorrect');
+      $(this).find('img').css("display", "none");
+      $(this).find('.feedback').css("display", "table-cell");
 
       anyIncorrect = true;
 
@@ -118,13 +120,13 @@ function endGame(correctCount, anyIncorrect) {
 
   } else if (correctCount === correctArray.length && anyIncorrect) {
     $("#header p").html("You selected all of the correct tiles. However, you also selected some incorrect tiles! Hover over them to see why.");
-    $('#header p').css("color", "#e04545");
+    //$('#header p').css("color", "#e04545");
   } else if (anyIncorrect) {
     $("#header p").html("You selected some tiles incorrectly! Hover over a red tile to find out why. When you are ready to try again, click 'Restart'.");
-    $('#header p').css("color", "#e04545");
+    //$('#header p').css("color", "#e04545");
   } else {
     $("#header p").html("You are missing some of the correct tiles! Click 'Restart' to try again!");
-    $('#header p').css("color", "#e04545");
+    //$('#header p').css("color", "#e04545");
   }
 
   $('#restart-btn').prop('disabled', false);
